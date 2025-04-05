@@ -1,0 +1,66 @@
+abbr {
+    font-style: italic;
+    color: chocolate;
+  }
+  a[href^="mailto"]::before {
+    content: "📧 ";
+  }
+  
+  a[href^="tel"]::before {
+    content: "📞 ";
+  }
+  .forecast {
+    margin: 0;
+    padding: 0.3rem;
+    background-color: #eee;
+  }
+  
+  .forecast > h1,
+  .day-forecast {
+    margin: 0.5rem;
+    padding: 0.3rem;
+    font-size: 1.2rem;
+  }
+  
+  .day-forecast {
+    background: right/contain content-box border-box no-repeat
+      url("rain.svg") white;
+  }
+  
+  .day-forecast > h2,
+  .day-forecast > p {
+    margin: 0.2rem;
+    font-size: 1rem;
+  }
+  aside {
+    width: 40%;
+    padding-left: 0.5rem;
+    margin-left: 0.5rem;
+    float: right;
+    box-shadow: inset 5px 0 5px -5px #29627e;
+    font-style: italic;
+    color: #29627e;
+  }
+  
+  aside > p {
+    margin: 0.5rem;
+  }
+  div:has(> blockquote) {
+    background-color: #ededed;
+    margin: 10px auto;
+    padding: 15px;
+    border-radius: 5px;
+  }
+  
+  blockquote p::before {
+    content: "\201C";
+  }
+  
+  blockquote p::after {
+    content: "\201D";
+  }
+  
+  blockquote + p {
+    text-align: right;
+  }
+    

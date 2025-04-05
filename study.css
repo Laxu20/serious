@@ -1,0 +1,818 @@
+/* Universal Selector (*) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f0f0f0; /* Light gray background */
+    color: #333333; /* Dark gray text */
+    font-family: 'Arial', sans-serif; /* Default font family */
+}
+
+/* Body specific styling */
+body {
+    background-color: #ffffff; /* White background */
+    padding: 20px;
+    text-align: center; /* Center align all text in body */
+    width: 100vw; /* Viewport width */
+    min-height: 100vh; /* Viewport height */
+    text-transform: capitalize; /* Capitalizes first letter of each word */
+}
+
+/* Container for units demonstration */
+.container {
+    width: 80%; /* Percentage of parent width */
+    margin: 0 auto;
+    padding: 2rem; /* Relative to root font size */
+}
+
+/* Heading styling */
+h1 {
+    background-color: #4a90e2; /* Blue background */
+    color: #ffffff; /* White text */
+    padding: 15px;
+    margin-bottom: 20px;
+    text-align: center; /* Center align heading */
+    font-weight: 700; /* Bold weight */
+    font-family: 'Helvetica', Arial, sans-serif; /* Specific font for heading */
+    text-decoration: underline; /* Underline decoration */
+    font-size: 2.5rem; /* Relative to root font size */
+    text-transform: uppercase; /* Converts all text to uppercase */
+}
+
+/* Paragraph styling */
+p {
+    background-color: #e8f5e9; /* Light green background */
+    color: #2e7d32; /* Dark green text */
+    padding: 10px;
+    margin: 10px 0;
+    text-align: left; /* Left align paragraph */
+    font-weight: normal; /* Normal weight */
+    font-family: 'Times New Roman', serif; /* Serif font for paragraph */
+    text-decoration: none; /* No decoration */
+    font-size: 16px; /* Absolute unit */
+    line-height: 1.5em; /* Relative to element's font size */
+    text-transform: lowercase; /* Converts all text to lowercase */
+}
+
+/* Div styling */
+div {
+    background-color: #fff3e0; /* Light orange background */
+    color: #e65100; /* Dark orange text */
+    padding: 10px;
+    margin: 10px 0;
+    text-align: right; /* Right align div content */
+    font-weight: 600; /* Semi-bold weight */
+    font-family: 'Verdana', Geneva, sans-serif; /* Sans-serif font for div */
+    text-decoration: line-through; /* Strikethrough decoration */
+    font-size: 1.2em; /* Relative to parent's font size */
+    width: 50vw; /* 50% of viewport width */
+    height: 100px; /* Absolute unit */
+    text-transform: none; /* No text transformation */
+}
+
+/* Units demonstration box */
+.units-box {
+    width: 300px; /* Absolute unit */
+    height: 200px; /* Absolute unit */
+    margin: 2rem auto; /* Relative to root font size */
+    padding: 1em; /* Relative to element's font size */
+    border: 2px solid #333;
+    font-size: 1.2rem; /* Relative to root font size */
+    text-transform: capitalize; /* Capitalizes first letter of each word */
+}
+
+/* Responsive text */
+.responsive-text {
+    font-size: clamp(1rem, 2vw, 2rem); /* Responsive font size */
+    margin: 1vh 1vw; /* Viewport units */
+    text-transform: uppercase; /* Converts all text to uppercase */
+}
+
+/* Box Model Demonstration */
+.box-model-demo {
+    width: 300px;
+    height: 200px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 5px solid #ff6b6b;
+    background-color: #ffffff;
+    position: relative;
+}
+
+/* Content Box */
+.box-model-demo::before {
+    content: "Content Box";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #4ecdc4;
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+}
+
+/* Padding Box */
+.box-model-demo::after {
+    content: "Padding Box";
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #45b7d1;
+    padding: 5px 10px;
+    color: white;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Border Box */
+.box-model-demo {
+    box-shadow: 0 0 0 5px #ffd93d;
+}
+
+/* Margin Box */
+.box-model-demo {
+    box-shadow: 0 0 0 10px #6c5ce7;
+}
+
+/* Box Model Labels */
+.box-model-label {
+    position: relative;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.box-model-label span {
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 0 5px;
+    border-radius: 3px;
+    font-size: 12px;
+    color: white;
+}
+
+.margin-label {
+    background-color: #6c5ce7;
+}
+
+.border-label {
+    background-color: #ffd93d;
+    color: #333;
+}
+
+.padding-label {
+    background-color: #ff6b6b;
+}
+
+.content-label {
+    background-color: #4ecdc4;
+}
+
+/* Margin and Padding Demonstration */
+.margin-padding-demo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin: 20px;
+}
+
+/* Individual Boxes */
+.margin-box {
+    width: 200px;
+    height: 100px;
+    background-color: #e3f2fd;
+    border: 2px solid #2196f3;
+    position: relative;
+}
+
+.padding-box {
+    width: 200px;
+    height: 100px;
+    background-color: #f3e5f5;
+    border: 2px solid #9c27b0;
+    position: relative;
+}
+
+/* Margin Examples */
+.margin-all {
+    margin: 20px; /* All sides */
+}
+
+.margin-sides {
+    margin: 0 20px; /* Top/Bottom: 0, Left/Right: 20px */
+}
+
+.margin-top {
+    margin-top: 20px; /* Only top */
+}
+
+.margin-bottom {
+    margin-bottom: 20px; /* Only bottom */
+}
+
+.margin-auto {
+    margin: 0 auto; /* Center horizontally */
+}
+
+/* Padding Examples */
+.padding-all {
+    padding: 20px; /* All sides */
+}
+
+.padding-sides {
+    padding: 0 20px; /* Top/Bottom: 0, Left/Right: 20px */
+}
+
+.padding-top {
+    padding-top: 20px; /* Only top */
+}
+
+.padding-bottom {
+    padding-bottom: 20px; /* Only bottom */
+}
+
+/* Labels for demonstration */
+.margin-box::before,
+.padding-box::before {
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 3px;
+    font-size: 12px;
+}
+
+.margin-box::before {
+    content: "Margin Box";
+}
+
+.padding-box::before {
+    content: "Padding Box";
+}
+
+/* Content inside boxes */
+.box-content {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 5px;
+    border-radius: 3px;
+    font-size: 14px;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Margin and Padding Shorthand Values */
+.shorthand-demo {
+    margin: 10px 20px 30px 40px; /* Top Right Bottom Left (Clockwise) */
+    padding: 10px 20px 30px 40px; /* Top Right Bottom Left (Clockwise) */
+    background-color: #fff3e0;
+    border: 2px solid #ff9800;
+}
+
+/* Negative Margin Example */
+.negative-margin {
+    margin: -20px;
+    background-color: #ffebee;
+    border: 2px solid #f44336;
+}
+
+/* Percentage Padding Example */
+.percentage-padding {
+    padding: 10%;
+    background-color: #e8f5e9;
+    border: 2px solid #4caf50;
+}
+
+/* Text Spacing and Link Demonstration */
+.text-spacing-demo {
+    margin: 20px;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+}
+
+/* Letter Spacing */
+.letter-spacing {
+    letter-spacing: 2px; /* Space between letters */
+    text-align: center;
+    margin: 10px 0;
+}
+
+/* Word Spacing */
+.word-spacing {
+    word-spacing: 10px; /* Space between words */
+    text-align: center;
+    margin: 10px 0;
+}
+
+/* Line Height */
+.line-height {
+    line-height: 2; /* Space between lines */
+    text-align: center;
+    margin: 10px 0;
+}
+
+/* Link Styling */
+.link-demo {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px;
+}
+
+.link-demo a {
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+/* Link States */
+.link-demo a:link {
+    background-color: #e3f2fd;
+    color: #1976d2;
+}
+
+.link-demo a:visited {
+    background-color: #f3e5f5;
+    color: #7b1fa2;
+}
+
+.link-demo a:hover {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    transform: translateX(10px);
+}
+
+.link-demo a:active {
+    background-color: #ffebee;
+    color: #c62828;
+}
+
+/* Gap Demonstration */
+.gap-demo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between flex items */
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff3e0;
+    border-radius: 8px;
+}
+
+.gap-item {
+    width: 100px;
+    height: 100px;
+    background-color: #ff9800;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+/* Heading Height and Spacing */
+.heading-height-demo {
+    margin: 20px;
+    padding: 20px;
+    background-color: #e8f5e9;
+    border-radius: 8px;
+}
+
+.heading-height-demo h1 {
+    height: 80px; /* Fixed height */
+    line-height: 80px; /* Match height for vertical centering */
+    margin: 10px 0;
+    background-color: #4caf50;
+    color: white;
+    border-radius: 4px;
+}
+
+.heading-height-demo h2 {
+    min-height: 60px; /* Minimum height */
+    line-height: 60px;
+    margin: 10px 0;
+    background-color: #81c784;
+    color: white;
+    border-radius: 4px;
+}
+
+.heading-height-demo h3 {
+    max-height: 50px; /* Maximum height */
+    line-height: 50px;
+    margin: 10px 0;
+    background-color: #a5d6a7;
+    color: white;
+    border-radius: 4px;
+    overflow: hidden; /* Handle content overflow */
+}
+
+/* Display Property Demonstration */
+.display-demo {
+    margin: 20px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+}
+
+/* Block Display */
+.block-demo {
+    display: block;
+    background-color: #e3f2fd;
+    margin: 10px 0;
+    padding: 10px;
+    border: 2px solid #2196f3;
+}
+
+/* Inline Display */
+.inline-demo {
+    display: inline;
+    background-color: #f3e5f5;
+    padding: 5px 10px;
+    border: 2px solid #9c27b0;
+    margin: 0 5px;
+}
+
+/* Inline-Block Display */
+.inline-block-demo {
+    display: inline-block;
+    background-color: #e8f5e9;
+    padding: 10px;
+    margin: 10px;
+    border: 2px solid #4caf50;
+    width: 150px;
+    height: 100px;
+}
+
+/* Flex Display */
+.flex-demo {
+    display: flex;
+    background-color: #fff3e0;
+    padding: 20px;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: 2px solid #ff9800;
+}
+
+.flex-item {
+    background-color: #ff9800;
+    color: white;
+    padding: 10px;
+    border-radius: 4px;
+    min-width: 100px;
+    text-align: center;
+}
+
+/* Grid Display */
+.grid-demo {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    background-color: #e8eaf6;
+    padding: 20px;
+    border: 2px solid #3f51b5;
+}
+
+.grid-item {
+    background-color: #3f51b5;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 4px;
+}
+
+/* None Display */
+.none-demo {
+    display: none;
+    background-color: #ffebee;
+    padding: 10px;
+    border: 2px solid #f44336;
+}
+
+/* Table Display */
+.table-demo {
+    display: table;
+    background-color: #fce4ec;
+    padding: 20px;
+    border: 2px solid #e91e63;
+}
+
+.table-row {
+    display: table-row;
+}
+
+.table-cell {
+    display: table-cell;
+    padding: 10px;
+    background-color: #e91e63;
+    color: white;
+    border: 1px solid #fff;
+}
+
+/* Visibility Demonstration */
+.visibility-demo-container {
+    margin: 20px;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+}
+
+.visibility-box {
+    width: 200px;
+    height: 100px;
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid #333;
+    display: inline-block;
+    position: relative;
+}
+
+.visibility-box::before {
+    content: "Original Box";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 5px;
+    border-radius: 3px;
+}
+
+/* Visibility Hidden */
+.visibility-hidden {
+    visibility: hidden;
+    background-color: #e3f2fd;
+    border-color: #2196f3;
+}
+
+/* Display None */
+.display-none {
+    display: none;
+    background-color: #f3e5f5;
+    border-color: #9c27b0;
+}
+
+/* Opacity */
+.opacity-zero {
+    opacity: 0;
+    background-color: #e8f5e9;
+    border-color: #4caf50;
+}
+
+/* Visibility with Hover */
+.visibility-hover {
+    background-color: #fff3e0;
+    border-color: #ff9800;
+    transition: visibility 0.3s ease;
+}
+
+.visibility-hover:hover .visibility-hidden {
+    visibility: visible;
+}
+
+/* Visibility with Position */
+.visibility-position {
+    position: relative;
+    background-color: #fce4ec;
+    border-color: #e91e63;
+}
+
+.visibility-position .visibility-hidden {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+/* Visibility with Pointer Events */
+.visibility-pointer {
+    background-color: #e0f2f1;
+    border-color: #009688;
+}
+
+.visibility-pointer .visibility-hidden {
+    pointer-events: none;
+}
+
+/* Display Property Labels */
+.display-label {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+/* Alpha Channel and Opacity Demonstration */
+.alpha-opacity-demo {
+    margin: 20px;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+}
+
+/* Alpha Channel Examples */
+.alpha-box {
+    width: 200px;
+    height: 100px;
+    margin: 10px;
+    padding: 10px;
+    display: inline-block;
+    position: relative;
+}
+
+/* RGBA Colors */
+.rgba-red {
+    background-color: rgba(255, 0, 0, 0.5); /* Semi-transparent red */
+}
+
+.rgba-green {
+    background-color: rgba(0, 255, 0, 0.3); /* More transparent green */
+}
+
+.rgba-blue {
+    background-color: rgba(0, 0, 255, 0.7); /* Less transparent blue */
+}
+
+/* HSLA Colors */
+.hsla-color {
+    background-color: hsla(120, 100%, 50%, 0.5); /* Semi-transparent green */
+}
+
+/* Hex with Alpha */
+.hex-alpha {
+    background-color: #ff000080; /* Semi-transparent red */
+}
+
+/* Opacity Property */
+.opacity-box {
+    width: 200px;
+    height: 100px;
+    margin: 10px;
+    padding: 10px;
+    display: inline-block;
+    position: relative;
+    background-color: #2196f3;
+}
+
+.opacity-100 {
+    opacity: 1; /* Fully opaque */
+}
+
+.opacity-75 {
+    opacity: 0.75; /* 75% opacity */
+}
+
+.opacity-50 {
+    opacity: 0.5; /* 50% opacity */
+}
+
+.opacity-25 {
+    opacity: 0.25; /* 25% opacity */
+}
+
+/* Opacity with Hover Effect */
+.opacity-hover {
+    transition: opacity 0.3s ease;
+}
+
+.opacity-hover:hover {
+    opacity: 0.5;
+}
+
+/* Opacity with Child Elements */
+.opacity-parent {
+    opacity: 0.5;
+    background-color: #9c27b0;
+}
+
+.opacity-child {
+    background-color: #e91e63;
+    padding: 10px;
+    margin: 5px;
+}
+
+/* Alpha Channel with Text */
+.alpha-text {
+    color: rgba(0, 0, 0, 0.7); /* Semi-transparent black text */
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+/* Alpha Channel with Border */
+.alpha-border {
+    border: 3px solid rgba(33, 150, 243, 0.5); /* Semi-transparent blue border */
+    padding: 10px;
+    margin: 10px;
+}
+
+/* Alpha Channel with Box Shadow */
+.alpha-shadow {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Semi-transparent shadow */
+    padding: 20px;
+    margin: 10px;
+    background-color: white;
+}
+
+/* Units Demonstration */
+.units-demo {
+    margin: 20px;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+}
+
+/* Base font size for rem demonstration */
+html {
+    font-size: 16px; /* Base font size for rem calculations */
+}
+
+/* Percentage Units */
+.percentage-demo {
+    width: 80%; /* 80% of parent width */
+    margin: 2% auto; /* 2% of parent width for top/bottom margin */
+    padding: 3%; /* 3% of parent width for padding */
+    background-color: #e3f2fd;
+    border: 2px solid #2196f3;
+}
+
+.percentage-child {
+    width: 50%; /* 50% of parent width */
+    height: 50%; /* 50% of parent height */
+    background-color: #bbdefb;
+    margin: 10% auto; /* 10% of parent width for margin */
+}
+
+/* EM Units */
+.em-demo {
+    font-size: 20px; /* Base font size for em calculations */
+    padding: 1em; /* 1em = 20px */
+    background-color: #f3e5f5;
+    border: 2px solid #9c27b0;
+}
+
+.em-child {
+    font-size: 1.5em; /* 1.5em = 30px (1.5 * 20px) */
+    padding: 1em; /* 1em = 30px (relative to its own font-size) */
+    background-color: #e1bee7;
+}
+
+.em-grandchild {
+    font-size: 1.5em; /* 1.5em = 45px (1.5 * 30px) */
+    padding: 1em; /* 1em = 45px (relative to its own font-size) */
+    background-color: #ce93d8;
+}
+
+/* REM Units */
+.rem-demo {
+    font-size: 20px; /* This won't affect rem calculations */
+    padding: 1rem; /* 1rem = 16px (base font size) */
+    background-color: #e8f5e9;
+    border: 2px solid #4caf50;
+}
+
+.rem-child {
+    font-size: 1.5rem; /* 1.5rem = 24px (1.5 * 16px) */
+    padding: 1rem; /* 1rem = 16px (always relative to root) */
+    background-color: #c8e6c9;
+}
+
+.rem-grandchild {
+    font-size: 1.5rem; /* 1.5rem = 24px (1.5 * 16px) */
+    padding: 1rem; /* 1rem = 16px (always relative to root) */
+    background-color: #a5d6a7;
+}
+
+/* Mixed Units Example */
+.mixed-units {
+    width: 80%; /* Percentage of parent */
+    margin: 2rem; /* Relative to root font size */
+    padding: 1.5em; /* Relative to element's font size */
+    font-size: 18px;
+    background-color: #fff3e0;
+    border: 2px solid #ff9800;
+}
+
+/* Responsive Units Example */
+.responsive-units {
+    font-size: clamp(1rem, 2vw, 2rem); /* Responsive font size */
+    padding: clamp(1rem, 5vw, 2rem); /* Responsive padding */
+    margin: clamp(1rem, 3vw, 2rem); /* Responsive margin */
+    background-color: #fce4ec;
+    border: 2px solid #e91e63;
+}
+
+/* Unit Labels */
+.unit-label {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+}

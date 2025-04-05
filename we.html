@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Notes</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        nav {
+            background-color: #333;
+            padding: 10px;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 15px;
+        }
+        nav ul li {
+            display: inline;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        .color-box {
+            width: 100px;
+            height: 100px;
+            background-color: #ff5733;
+            color: white;
+            text-align: center;
+            line-height: 100px;
+            margin: 10px;
+        }
+        .text-example {
+            text-align: center;
+            font-weight: bold;
+            font-family: 'Arial', sans-serif;
+            text-decoration: underline;
+            text-transform: uppercase;
+        }
+        .box {
+            width: 200px;
+            height: 100px;
+            background-color: #4caf50;
+            padding: 10px;
+            margin: 10px;
+            border: 2px solid black;
+        }
+        .position-box {
+            width: 150px;
+            height: 100px;
+            background-color: #008cba;
+            position: relative;
+            left: 20px;
+            top: 10px;
+            z-index: 10;
+            text-align: center;
+            color: white;
+            line-height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#colors">Colors</a></li>
+            <li><a href="#text">Text Styling</a></li>
+            <li><a href="#box-model">Box Model</a></li>
+            <li><a href="#positioning">Positioning</a></li>
+        </ul>
+    </nav>
+
+    <section id="colors">
+        <h2>Colors & Background</h2>
+        <div class="color-box">Color Example</div>
+    </section>
+
+    <section id="text">
+        <h2>Text Styling</h2>
+        <p class="text-example">This is a text example with different styles.</p>
+    </section>
+
+    <section id="box-model">
+        <h2>Box Model</h2>
+        <div class="box">Box Model Example</div>
+    </section>
+
+    <section id="positioning">
+        <h2>Positioning & Z-Index</h2>
+        <div class="position-box">Position Example</div>
+    </section>
+</body>
+</html>

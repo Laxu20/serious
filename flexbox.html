@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .game-container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+        }
+        .flexbox-area {
+            display: flex;
+            border: 2px dashed #333;
+            height: 200px;
+            justify-content: flex-start; /* Default */
+            align-items: flex-start;
+        }
+        .box {
+            width: 50px;
+            height: 50px;
+            background-color: #007bff;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 5px;
+        }
+        .controls {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Flexbox Game</h1>
+    <p>Use the buttons below to arrange the boxes correctly!</p>
+    <div class="game-container">
+        <div class="flexbox-area" id="flexbox">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+        </div>
+        <div class="controls">
+            <button onclick="updateFlexbox('justify-content', 'flex-start')">Left</button>
+            <button onclick="updateFlexbox('justify-content', 'center')">Center</button>
+            <button onclick="updateFlexbox('justify-content', 'flex-end')">Right</button>
+            <button onclick="updateFlexbox('align-items', 'flex-start')">Top</button>
+            <button onclick="updateFlexbox('align-items', 'center')">Middle</button>
+            <button onclick="updateFlexbox('align-items', 'flex-end')">Bottom</button>
+        </div>
+    </div>
+
+    <script>
+        function updateFlexbox(property, value) {
+            document.getElementById('flexbox').style[property] = value;
+        }
+    </script>
+</body>
+</html>

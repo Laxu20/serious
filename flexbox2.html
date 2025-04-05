@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Game</title>
+    <link rel="stylesheet" href="2.css">
+</head>
+<body>
+    <h1>Flexbox Playground</h1>
+    <div class="controls">
+        <label for="flex-direction">Flex Direction:</label>
+        <select id="flex-direction">
+            <option value="row">Row</option>
+            <option value="row-reverse">Row Reverse</option>
+            <option value="column">Column</option>
+            <option value="column-reverse">Column Reverse</option>
+        </select>
+
+        <label for="justify-content">Justify Content:</label>
+        <select id="justify-content">
+            <option value="flex-start">Flex Start</option>
+            <option value="flex-end">Flex End</option>
+            <option value="center">Center</option>
+            <option value="space-between">Space Between</option>
+            <option value="space-around">Space Around</option>
+            <option value="space-evenly">Space Evenly</option>
+        </select>
+
+        <label for="align-items">Align Items:</label>
+        <select id="align-items">
+            <option value="stretch">Stretch</option>
+            <option value="flex-start">Flex Start</option>
+            <option value="flex-end">Flex End</option>
+            <option value="center">Center</option>
+            <option value="baseline">Baseline</option>
+        </select>
+
+        <label for="flex-wrap">Flex Wrap:</label>
+        <select id="flex-wrap">
+            <option value="nowrap">No Wrap</option>
+            <option value="wrap">Wrap</option>
+            <option value="wrap-reverse">Wrap Reverse</option>
+        </select>
+
+        <label for="align-content">Align Content:</label>
+        <select id="align-content">
+            <option value="stretch">Stretch</option>
+            <option value="flex-start">Flex Start</option>
+            <option value="flex-end">Flex End</option>
+            <option value="center">Center</option>
+            <option value="space-between">Space Between</option>
+            <option value="space-around">Space Around</option>
+        </select>
+    </div>
+
+    <div class="flex-container">
+        <div class="flex-item" style="flex-grow: 1; flex-shrink: 1;">1</div>
+        <div class="flex-item" style="flex-grow: 2; flex-shrink: 2;">2</div>
+        <div class="flex-item" style="flex-grow: 1; flex-shrink: 1;">3</div>
+    </div>
+
+    <script>
+        const flexContainer = document.querySelector('.flex-container');
+        document.getElementById('flex-direction').addEventListener('change', (e) => {
+            flexContainer.style.flexDirection = e.target.value;
+        });
+        document.getElementById('justify-content').addEventListener('change', (e) => {
+            flexContainer.style.justifyContent = e.target.value;
+        });
+        document.getElementById('align-items').addEventListener('change', (e) => {
+            flexContainer.style.alignItems = e.target.value;
+        });
+        document.getElementById('flex-wrap').addEventListener('change', (e) => {
+            flexContainer.style.flexWrap = e.target.value;
+        });
+        document.getElementById('align-content').addEventListener('change', (e) => {
+            flexContainer.style.alignContent = e.target.value;
+        });
+    </script>
+</body>
+</html>

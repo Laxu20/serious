@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Web Designing Notes</title>
+    <style>body {
+        background-color: #f0f0f0;
+        color: #333;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    
+    /* Navbar */
+    .navbar {
+        background-color: #333;
+        padding: 10px;
+        text-align: center;
+    }
+    .navbar a {
+        color: white;
+        text-decoration: none;
+        padding: 10px;
+        display: inline-block;
+    }
+    
+    /* Text Properties */
+    .text-example {
+        text-align: center;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    
+    /* Box Model */
+    .box {
+        width: 300px;
+        padding: 20px;
+        margin: 10px;
+        border: 2px solid #333;
+        background-color: #f8d7da;
+    }
+    
+    /* Fixed Position */
+    .fixed-box {
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+        background-color: yellow;
+        padding: 10px;
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>CSS Web Designing Notes</h1>
+    </header>
+    <nav class="navbar">
+        <a href="#colors">Colors</a>
+        <a href="#text">Text</a>
+        <a href="#box-model">Box Model</a>
+        <a href="#position">Position</a>
+    </nav>
+    <section id="colors">
+        <h2>CSS Colors</h2>
+        <p style="color: #ff5733;">This is a colored text using Hex.</p>
+    </section>
+    <section id="text">
+        <h2>Text Properties</h2>
+        <p class="text-example">Text Alignment, Font, Transform, etc.</p>
+    </section>
+    <section id="box-model">
+        <h2>Box Model</h2>
+        <div class="box">This is a box with padding, margin, and border.</div>
+    </section>
+    <section id="position">
+        <h2>Positioning</h2>
+        <div class="fixed-box">I am Fixed</div>
+    </section>
+</body>
+</html>

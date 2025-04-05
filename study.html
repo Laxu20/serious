@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors Study</title>
+    <link rel="stylesheet" href="study.css">
+</head>
+<body>
+    <h1>Universal Selector Example</h1>
+    <p>This is a paragraph with universal selector styling.</p>
+    <div>This is a div with universal selector styling.</div>
+
+    <!-- Box Model Demonstration -->
+    <div class="box-model-demo"></div>
+    <div class="box-model-label">
+        <span class="margin-label">Margin</span>
+        <span class="border-label">Border</span>
+        <span class="padding-label">Padding</span>
+        <span class="content-label">Content</span>
+    </div>
+
+    <!-- Text Spacing Demonstration -->
+    <div class="text-spacing-demo">
+        <h2>Text Spacing Examples</h2>
+        <p class="letter-spacing">This text has letter spacing of 2px</p>
+        <p class="word-spacing">This text has word spacing of 10px</p>
+        <p class="line-height">This text has line height of 2<br>This is the second line<br>And this is the third line</p>
+    </div>
+
+    <!-- Link Styling Demonstration -->
+    <div class="link-demo">
+        <h2>Link States</h2>
+        <a href="#">Normal Link</a>
+        <a href="#" style="color: #7b1fa2;">Visited Link</a>
+        <a href="#">Hover over me!</a>
+        <a href="#">Click me!</a>
+    </div>
+
+    <!-- Gap Demonstration -->
+    <div class="gap-demo">
+        <h2>Gap Between Flex Items</h2>
+        <div class="gap-item">Item 1</div>
+        <div class="gap-item">Item 2</div>
+        <div class="gap-item">Item 3</div>
+        <div class="gap-item">Item 4</div>
+        <div class="gap-item">Item 5</div>
+        <div class="gap-item">Item 6</div>
+    </div>
+
+    <!-- Heading Height Demonstration -->
+    <div class="heading-height-demo">
+        <h2>Heading Heights</h2>
+        <h1>Fixed Height Heading (80px)</h1>
+        <h2>Minimum Height Heading (60px)</h2>
+        <h3>Maximum Height Heading (50px) with overflow text that will be hidden</h3>
+    </div>
+
+    <!-- Margin and Padding Demonstration -->
+    <h2>Margin and Padding Examples</h2>
+    <div class="margin-padding-demo">
+        <!-- Margin Examples -->
+        <div class="margin-box margin-all">
+            <div class="box-content">Margin: 20px (All sides)</div>
+        </div>
+        <div class="margin-box margin-sides">
+            <div class="box-content">Margin: 0 20px (Sides only)</div>
+        </div>
+        <div class="margin-box margin-top">
+            <div class="box-content">Margin-top: 20px</div>
+        </div>
+        <div class="margin-box margin-bottom">
+            <div class="box-content">Margin-bottom: 20px</div>
+        </div>
+        <div class="margin-box margin-auto">
+            <div class="box-content">Margin: 0 auto (Center)</div>
+        </div>
+
+        <!-- Padding Examples -->
+        <div class="padding-box padding-all">
+            <div class="box-content">Padding: 20px (All sides)</div>
+        </div>
+        <div class="padding-box padding-sides">
+            <div class="box-content">Padding: 0 20px (Sides only)</div>
+        </div>
+        <div class="padding-box padding-top">
+            <div class="box-content">Padding-top: 20px</div>
+        </div>
+        <div class="padding-box padding-bottom">
+            <div class="box-content">Padding-bottom: 20px</div>
+        </div>
+
+        <!-- Special Cases -->
+        <div class="shorthand-demo">
+            <div class="box-content">Shorthand: 10px 20px 30px 40px</div>
+        </div>
+        <div class="negative-margin">
+            <div class="box-content">Negative Margin: -20px</div>
+        </div>
+        <div class="percentage-padding">
+            <div class="box-content">Percentage Padding: 10%</div>
+        </div>
+    </div>
+
+    <!-- Display Property Demonstration -->
+    <div class="display-demo">
+        <h2>Display Property Examples</h2>
+        
+        <!-- Block Display -->
+        <div class="display-label">Block Display:</div>
+        <div class="block-demo">Block Element 1</div>
+        <div class="block-demo">Block Element 2</div>
+        <div class="block-demo">Block Element 3</div>
+
+        <!-- Inline Display -->
+        <div class="display-label">Inline Display:</div>
+        <span class="inline-demo">Inline Element 1</span>
+        <span class="inline-demo">Inline Element 2</span>
+        <span class="inline-demo">Inline Element 3</span>
+
+        <!-- Inline-Block Display -->
+        <div class="display-label">Inline-Block Display:</div>
+        <div class="inline-block-demo">Inline-Block 1</div>
+        <div class="inline-block-demo">Inline-Block 2</div>
+        <div class="inline-block-demo">Inline-Block 3</div>
+
+        <!-- Flex Display -->
+        <div class="display-label">Flex Display:</div>
+        <div class="flex-demo">
+            <div class="flex-item">Flex Item 1</div>
+            <div class="flex-item">Flex Item 2</div>
+            <div class="flex-item">Flex Item 3</div>
+            <div class="flex-item">Flex Item 4</div>
+        </div>
+
+        <!-- Grid Display -->
+        <div class="display-label">Grid Display:</div>
+        <div class="grid-demo">
+            <div class="grid-item">Grid Item 1</div>
+            <div class="grid-item">Grid Item 2</div>
+            <div class="grid-item">Grid Item 3</div>
+            <div class="grid-item">Grid Item 4</div>
+            <div class="grid-item">Grid Item 5</div>
+            <div class="grid-item">Grid Item 6</div>
+        </div>
+
+        <!-- Table Display -->
+        <div class="display-label">Table Display:</div>
+        <div class="table-demo">
+            <div class="table-row">
+                <div class="table-cell">Cell 1</div>
+                <div class="table-cell">Cell 2</div>
+                <div class="table-cell">Cell 3</div>
+            </div>
+            <div class="table-row">
+                <div class="table-cell">Cell 4</div>
+                <div class="table-cell">Cell 5</div>
+                <div class="table-cell">Cell 6</div>
+            </div>
+        </div>
+
+        <!-- Visibility vs Display -->
+        <div class="display-label">Visibility vs Display:</div>
+        <div class="visibility-demo">This element is hidden with visibility: hidden</div>
+        <div class="none-demo">This element is hidden with display: none</div>
+    </div>
+
+    <!-- Visibility Demonstration -->
+    <div class="visibility-demo-container">
+        <h2>Visibility Property Examples</h2>
+        
+        <!-- Basic Visibility -->
+        <div class="visibility-box">
+            <div class="visibility-hidden">Visibility: Hidden</div>
+        </div>
+        
+        <div class="visibility-box">
+            <div class="display-none">Display: None</div>
+        </div>
+        
+        <div class="visibility-box">
+            <div class="opacity-zero">Opacity: 0</div>
+        </div>
+
+        <!-- Visibility with Hover -->
+        <div class="visibility-box visibility-hover">
+            <div class="visibility-hidden">Hover to Show</div>
+        </div>
+
+        <!-- Visibility with Position -->
+        <div class="visibility-box visibility-position">
+            <div class="visibility-hidden">Positioned Hidden</div>
+        </div>
+
+        <!-- Visibility with Pointer Events -->
+        <div class="visibility-box visibility-pointer">
+            <div class="visibility-hidden">No Pointer Events</div>
+        </div>
+    </div>
+
+    <!-- Units Demonstration -->
+    <div class="units-demo">
+        <h2>CSS Units Demonstration</h2>
+        
+        <!-- Percentage Units -->
+        <div class="unit-label">Percentage Units (relative to parent):</div>
+        <div class="percentage-demo">
+            <div class="percentage-child">50% width and height</div>
+        </div>
+
+        <!-- EM Units -->
+        <div class="unit-label">EM Units (relative to parent font-size):</div>
+        <div class="em-demo">
+            <div class="em-child">
+                <div class="em-grandchild">Nested EM Example</div>
+            </div>
+        </div>
+
+        <!-- REM Units -->
+        <div class="unit-label">REM Units (relative to root font-size):</div>
+        <div class="rem-demo">
+            <div class="rem-child">
+                <div class="rem-grandchild">Nested REM Example</div>
+            </div>
+        </div>
+
+        <!-- Mixed Units -->
+        <div class="unit-label">Mixed Units Example:</div>
+        <div class="mixed-units">
+            Width: 80%<br>
+            Margin: 2rem<br>
+            Padding: 1.5em
+        </div>
+
+        <!-- Responsive Units -->
+        <div class="unit-label">Responsive Units with clamp():</div>
+        <div class="responsive-units">
+            Responsive font size and spacing
+        </div>
+    </div>
+</body>
+</html>
